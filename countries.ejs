@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Search for a Country</h1>
+    
+    <% if (countryData) { %>
+        <h2><%= countryData.name.common %></h2>
+        <ul>
+            <li>Capital: <%= countryData.capital %></li>
+            <li>Region: <%= countryData.region %></li>
+            <li>Subregion: <%= countryData.subregion %></li>
+            <li>Population: <%= countryData.population %></li>
+            <li>Area: <%= countryData.area %> km²</li>
+        </ul>
+    <% } %>
+    <% if (error) { %>
+        <p><%= error %></p>
+    <% } %>
+</body>
+</html>
